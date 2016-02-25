@@ -15,13 +15,13 @@
         <div class="grid-100">
           <div class="heading">
             <h1>Flickr Photo Feeder</h1>
-            <p>Choose which kind of animal you'd like to return photos of...</p>
+            <form>
+              <label for="search">Type a search term i.e birds, cat, dog...</label>
+              <input type="search" name="search" id="search">
+              <input type="submit" value="Search" id="submit">
+            </form>
           </div>
-          <ul class="filter-select">
-            <li><button>Dog</button></li>
-            <li><button>Cat</button></li>
-            <li><button>Moose</button></li>
-          </ul>
+
         </div>
 
         <div id="photos">

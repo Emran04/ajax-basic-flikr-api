@@ -1,9 +1,17 @@
 $(document).ready(function() {
-	$('button').click(function() {
-		$('button').removeClass('selected');
-		$(this).addClass('selected');
+	
+	$('form').submit(function(evt) {
+		evt.preventDefault();
+
+		// take input from search field and submit button
+		var $searchField = $('#search');
+		var $submitButton = $('#submit');
+
+		$searchField.prop('disabled', true);
+		$submitButton.attr('disabled', true).val('searching....');
+
 		var flikrApi = 'https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?';
-		var animal = $(this).text();
+		var animal = $searchField.val();
 		var flikrOptions = {
 			tags: animal,
 			format: 'json'
@@ -19,6 +27,9 @@ $(document).ready(function() {
 			
 			photoHtml += '</ul>';
 			$('#photos').html(photoHtml);
+
+			$searchField.prop('disabled', false);
+			$submitButton.attr('disabled', false).val('search');
 
 		}
 		$.getJSON(flikrApi, flikrOptions, displayPhotos);
