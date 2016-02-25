@@ -1,5 +1,5 @@
 # Photo search project by using AJAX and flikr api
-![Image of Project](img/ajax-flikr.jpg)
+![Image of Project](https://github.com/Emran04/ajax-basic-flikr-api/tree/master/img/ajax-flikr.jpg)
 
 Live Demo: [Link](http://emran04.github.io/ajax-basic-flikr-api)
 
